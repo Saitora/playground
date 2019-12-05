@@ -1,0 +1,18 @@
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+ext {
+    javaMainClass = "com.example.patterns.command.remote_controller.App"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
