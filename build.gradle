@@ -1,18 +1,32 @@
-
 plugins {
     id 'java'
     id 'application'
+    id "org.jetbrains.kotlin.jvm" version "1.3.61"
 }
 
 repositories {
     jcenter()
 }
 
-ext {
-    javaMainClass = "com.example.patterns.command.remote_controller.App"
-}
+targetCompatibility = 11
+sourceCompatibility = 11
 
 application {
-    mainClassName = javaMainClass
+    mainClassName("com.example.patterns.command.remote_controller.App")
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
