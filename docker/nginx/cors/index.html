@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>axios - post example</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body class="container">
+<h1>axios.get</h1>
+
+<button id="get" type="button" class="btn btn-primary">GET</button>
+
+<div id="output" class="container"></div>
+
+<script>
+    (function () {
+        var output = document.getElementById('output');
+        document.getElementById('get').onclick = function () {
+            axios.get('http://localhost:8080/points-of-interest')
+                .then(function (res) {
+                    output.className = 'container';
+                    output.innerHTML = res.data;
+                })
+                .catch(function (err) {
+                    output.className = 'container text-danger';
+                    output.innerHTML = err.message;
+                });
+        };
+    })();
+</script>
+</body>
+</html>
