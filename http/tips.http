@@ -1,0 +1,22 @@
+GET localhost:8080/tips
+
+###
+GET localhost:8080/random/tip
+
+###
+POST localhost:8080/tips
+Content-Type: application/json
+
+Simple Tip
+###
+POST localhost:8080/tips/actions
+Content-Type: application/json
+
+{
+  "id": "123"
+}
+
+###
+GET localhost:8080/tips/1
+
+###

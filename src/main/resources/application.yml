@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: in_memory
+
+
+app:
+  toggles:
+    ddpp219:
+      enabled: true
+      description: simple description
+    ddpp254:
+      enabled: true
+      description: another description
