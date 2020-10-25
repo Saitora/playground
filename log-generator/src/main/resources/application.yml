@@ -1,0 +1,8 @@
+server:
+  port: 12321
+
+
+# default location for configuration
+#logging:
+#  config: classpath:logback.xml
+
